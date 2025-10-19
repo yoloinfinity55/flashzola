@@ -1,0 +1,63 @@
+# The URL the site will be built for
+base_url = "https://minijohn.github.io/flashzola"  # 替换为您的实际站点 URL (e.g., Netlify 域名)
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true  # 全局英文搜索
+
+# The site title and description; used in feeds by default
+title = "MiniJohn's Tech Flow"
+description = "AI 驱动的技术博客：探索 Rust、Go 和自动化内容生成"
+
+# The default language; used in feeds
+default_language = "en"
+
+# Feed configuration (multi-language RSS)
+generate_feeds = true
+feed_filenames = ["rss.xml"]  # 生成 /rss.xml (en) 和 /zh/rss.xml
+
+# The taxonomies to be rendered for the site
+taxonomies = [
+    {name = "tags"},
+]
+
+# English default translations (no prefix)
+[translations]
+summary = "AI-powered tech blog on Rust, Go, and content automation"
+
+# Chinese (zh) language config
+[languages.zh]
+title = "MiniJohn 的技术流"  # 中文站点标题
+description = "AI 驱动的技术博客：探索 Rust、Go 和内容自动化"
+generate_feeds = true  # 中文 RSS
+build_search_index = false  # 禁用 zh 搜索，避免错误
+
+[languages.zh.translations]
+summary = "AI 驱动的技术博客：探索 Rust、Go 和内容自动化"
+
+[search]
+search_index_format = "elasticlunr_javascript"  # 全局搜索格式（英文专用）
+
+[markdown]
+# Whether to do syntax highlighting
+highlight_code = true
+highlight_theme = "base16-ocean-dark"  # 内置有效主题，暗黑代码高亮
+
+[extra]
+# Blog owner configuration
+blog_owner_name = "MiniJohn"
+blog_owner_image = "/images/minijohn-avatar.png"  # 放您的头像到 static/images/
+blog_owner_description = "AI 工程师，专注 Rust/Go 微服务和内容自动化工具"
+
+# Social media links
+social_links = [
+    { name = "GitHub", url = "https://github.com/minijohn" },
+    { name = "X", url = "https://x.com/minijohn" },
+    { name = "LinkedIn", url = "https://linkedin.com/in/minijohn" },
+    { name = "Bilibili", url = "https://space.bilibili.com/xxxxxx" }  # 替换您的 Bilibili ID
+]
+
+# Google Analytics / GTag id - Place your tag id here to enable Google Analytics
+google_analytics_gtag_id = ""  # 若需，填 G-XXXXXXX；否则留空
