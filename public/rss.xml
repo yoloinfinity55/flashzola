@@ -1,20 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-      <title>Rachel&#x27;s Creative</title>
-      <link>https://seankearney.github.io/zola-devin</link>
-      <description>A modern blog built with Zola</description>
+      <title>MiniJohn&#x27;s Tech Flow</title>
+      <link>https://yoloinfinity55.github.io/flashzola</link>
+      <description>AI 驱动的技术博客：探索 Rust、Go 和自动化内容生成</description>
       <generator>Zola</generator>
       <language>en</language>
-      <atom:link href="https://seankearney.github.io/zola-devin/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +0000</lastBuildDate>
+      <atom:link href="https://yoloinfinity55.github.io/flashzola/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Deep Dive: Zola Devin Theme - A Modern Static Site Generator Theme</title>
+          <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://yoloinfinity55.github.io/flashzola/post/project-analysis-zola-devin-theme/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/project-analysis-zola-devin-theme/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/project-analysis-zola-devin-theme/">&lt;h1 id=&quot;deep-dive-zola-devin-theme-a-modern-static-site-generator-theme&quot;&gt;Deep Dive: Zola Devin Theme - A Modern Static Site Generator Theme&lt;&#x2F;h1&gt;
+&lt;p&gt;After conducting a comprehensive analysis of this project, I&#x27;m excited to share my findings about this impressive static site generator theme. This isn&#x27;t just any theme - it&#x27;s a production-ready, feature-complete blogging platform that demonstrates modern web development best practices.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;project-overview&quot;&gt;Project Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;strong&gt;Zola Devin Theme&lt;&#x2F;strong&gt; is a modern, responsive theme designed specifically for the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola static site generator&lt;&#x2F;a&gt;. Built with Tailwind CSS and vanilla JavaScript, it offers a comprehensive solution for bloggers and content creators who want a fast, secure, and beautiful website.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;technology-stack&quot;&gt;Technology Stack&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;core-technologies&quot;&gt;Core Technologies&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Static Site Generator&lt;&#x2F;strong&gt;: Zola (Rust-based) - Extremely fast and secure&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CSS Framework&lt;&#x2F;strong&gt;: Tailwind CSS v3.4.17 - Utility-first approach for rapid development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;&#x2F;strong&gt;: Vanilla JavaScript - No framework dependencies, pure performance&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Search Engine&lt;&#x2F;strong&gt;: Elasticlunr - Client-side search with intelligent highlighting&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;supporting-tools&quot;&gt;Supporting Tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Typography Plugin&lt;&#x2F;strong&gt;: @tailwindcss&#x2F;typography v0.5.8 - Beautiful text rendering&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Build Process&lt;&#x2F;strong&gt;: NPM scripts for asset compilation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Content&lt;&#x2F;strong&gt;: Markdown with YAML front matter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;key-features-breakdown&quot;&gt;Key Features Breakdown&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;art-modern-design-system&quot;&gt;🎨 Modern Design System&lt;&#x2F;h3&gt;
+&lt;p&gt;The theme features a clean, professional design that adapts beautifully to different screen sizes. The color scheme uses a thoughtful palette that works well in both light and dark modes, with careful attention to contrast ratios for accessibility.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;first-quarter-moon-dark-mode-support&quot;&gt;🌓 Dark Mode Support&lt;&#x2F;h3&gt;
+&lt;p&gt;One of the standout features is the sophisticated dark mode implementation:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Smooth transitions between themes&lt;&#x2F;li&gt;
+&lt;li&gt;Persistent user preference storage&lt;&#x2F;li&gt;
+&lt;li&gt;Proper color contrast in both modes&lt;&#x2F;li&gt;
+&lt;li&gt;Elegant toggle button with contextual icons&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;mag-intelligent-search&quot;&gt;🔍 Intelligent Search&lt;&#x2F;h3&gt;
+&lt;p&gt;The search functionality is particularly impressive:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time search with debouncing&lt;&#x2F;li&gt;
+&lt;li&gt;Intelligent result highlighting&lt;&#x2F;li&gt;
+&lt;li&gt;Contextual snippets with search term emphasis&lt;&#x2F;li&gt;
+&lt;li&gt;Modal interface for focused searching&lt;&#x2F;li&gt;
+&lt;li&gt;Graceful error handling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;iphone-mobile-first-responsive-design&quot;&gt;📱 Mobile-First Responsive Design&lt;&#x2F;h3&gt;
+&lt;p&gt;Every aspect of the theme is optimized for mobile devices:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hamburger menu for small screens&lt;&#x2F;li&gt;
+&lt;li&gt;Touch-friendly interface elements&lt;&#x2F;li&gt;
+&lt;li&gt;Responsive typography that scales appropriately&lt;&#x2F;li&gt;
+&lt;li&gt;Optimized images and layouts&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;speech-balloon-comment-system&quot;&gt;💬 Comment System&lt;&#x2F;h3&gt;
+&lt;p&gt;The comment system is elegantly implemented using YAML files:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Co-located with blog posts for easy management&lt;&#x2F;li&gt;
+&lt;li&gt;Support for user avatars and formatted text&lt;&#x2F;li&gt;
+&lt;li&gt;Markdown rendering within comments&lt;&#x2F;li&gt;
+&lt;li&gt;Chronological organization&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;project-structure-analysis&quot;&gt;Project Structure Analysis&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;├── config.toml          # Bilingual site configuration
+&lt;&#x2F;span&gt;&lt;span&gt;├── templates&#x2F;           # Modular HTML templates
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── base.html       # Main layout with header&#x2F;footer
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── index.html      # Homepage with hero section
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── post.html       # Individual blog post layout
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── post-list.html  # Paginated post listings
+&lt;&#x2F;span&gt;&lt;span&gt;│   └── archive.html    # Yearly archive organization
+&lt;&#x2F;span&gt;&lt;span&gt;├── content&#x2F;            # Markdown content with front matter
+&lt;&#x2F;span&gt;&lt;span&gt;├── static&#x2F;             # Compiled assets and resources
+&lt;&#x2F;span&gt;&lt;span&gt;└── public&#x2F;             # Generated site output
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;configuration-highlights&quot;&gt;Configuration Highlights&lt;&#x2F;h2&gt;
+&lt;p&gt;The configuration file (&lt;code&gt;config.toml&lt;&#x2F;code&gt;) demonstrates thoughtful setup:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bilingual-support&quot;&gt;Bilingual Support&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[languages.zh]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;MiniJohn 的技术流&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;description &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;AI 驱动的技术博客：探索 Rust、Go 和内容自动化&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;search-optimization&quot;&gt;Search Optimization&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[search]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;search_index_format &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;elasticlunr_javascript&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[markdown]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;highlight_code &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;highlight_theme &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;base16-ocean-dark&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;content-organization&quot;&gt;Content Organization&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[taxonomies]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;blog_owner_name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;MiniJohn&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;social_links &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;GitHub&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;minijohn&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; },
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;X&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;x.com&#x2F;minijohn&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; }
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;technical-strengths&quot;&gt;Technical Strengths&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Static Generation&lt;&#x2F;strong&gt;: No server-side processing required&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Optimized CSS&lt;&#x2F;strong&gt;: Tailwind&#x27;s utility classes ensure minimal CSS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Client-Side Search&lt;&#x2F;strong&gt;: No external search service dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Efficient Loading&lt;&#x2F;strong&gt;: Strategic asset loading and caching&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;accessibility&quot;&gt;Accessibility&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ARIA Labels&lt;&#x2F;strong&gt;: Proper labeling for screen readers&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Keyboard Navigation&lt;&#x2F;strong&gt;: Full keyboard accessibility&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Color Contrast&lt;&#x2F;strong&gt;: WCAG-compliant color combinations&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Semantic HTML&lt;&#x2F;strong&gt;: Proper heading hierarchy and structure&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;maintainability&quot;&gt;Maintainability&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modular Templates&lt;&#x2F;strong&gt;: Easy to customize individual page types&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Clean Code Structure&lt;&#x2F;strong&gt;: Well-organized CSS and JavaScript&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Comprehensive README with examples&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Version Control&lt;&#x2F;strong&gt;: Git-ready project structure&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;build-process&quot;&gt;Build Process&lt;&#x2F;h2&gt;
+&lt;p&gt;The development workflow is streamlined and efficient:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Install dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Build CSS (watch mode for development)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;npx&lt;&#x2F;span&gt;&lt;span&gt; tailwindcss&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -i&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;static&#x2F;input.css&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;static&#x2F;tailwind.css&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --watch
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Build site for production
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; build
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Preview locally
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;content-management&quot;&gt;Content Management&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;post-structure&quot;&gt;Post Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;Each blog post follows a clear, organized structure:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown content with YAML front matter&lt;&#x2F;li&gt;
+&lt;li&gt;Optional promotional images&lt;&#x2F;li&gt;
+&lt;li&gt;Tag-based categorization&lt;&#x2F;li&gt;
+&lt;li&gt;Comment support via YAML files&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;example-post-front-matter&quot;&gt;Example Post Front Matter&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+++
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;title = &amp;quot;Blog Post Title&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;date = 2025-10-19
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;description = &amp;quot;Brief description of the post&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;promo_image = &amp;quot;promo-image.jpg&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;taxonomies&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;current-implementation-status&quot;&gt;Current Implementation Status&lt;&#x2F;h2&gt;
+&lt;p&gt;The theme is currently configured for &lt;strong&gt;MiniJohn&#x27;s Tech Flow&lt;&#x2F;strong&gt;, an AI engineering blog focusing on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust and Go microservices&lt;&#x2F;li&gt;
+&lt;li&gt;Content automation tools&lt;&#x2F;li&gt;
+&lt;li&gt;AI-driven development workflows&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The site features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;15+ published blog posts&lt;&#x2F;li&gt;
+&lt;li&gt;Bilingual content (English&#x2F;Chinese)&lt;&#x2F;li&gt;
+&lt;li&gt;Social media integration&lt;&#x2F;li&gt;
+&lt;li&gt;RSS feed generation&lt;&#x2F;li&gt;
+&lt;li&gt;Search functionality&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;areas-for-potential-enhancement&quot;&gt;Areas for Potential Enhancement&lt;&#x2F;h2&gt;
+&lt;p&gt;While the theme is remarkably complete, there are always opportunities for growth:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;potential-additions&quot;&gt;Potential Additions&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Syntax Highlighting&lt;&#x2F;strong&gt;: Enhanced code block rendering&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Image Optimization&lt;&#x2F;strong&gt;: Automated WebP conversion and lazy loading&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Analytics Integration&lt;&#x2F;strong&gt;: More detailed tracking capabilities&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SEO Enhancements&lt;&#x2F;strong&gt;: Advanced meta tag management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Performance Monitoring&lt;&#x2F;strong&gt;: Core Web Vitals tracking&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;customization-opportunities&quot;&gt;Customization Opportunities&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Color Schemes&lt;&#x2F;strong&gt;: Additional theme variants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Typography&lt;&#x2F;strong&gt;: Font family customization options&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Layout Variations&lt;&#x2F;strong&gt;: Alternative homepage layouts&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;&#x2F;strong&gt;: Extensibility for additional features&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;The Zola Devin Theme represents a high-quality, production-ready solution for modern blogging. Its combination of performance, accessibility, and feature completeness makes it an excellent choice for developers and content creators who value both technical excellence and user experience.&lt;&#x2F;p&gt;
+&lt;p&gt;The project&#x27;s architecture demonstrates deep understanding of modern web development practices, with careful attention to performance, accessibility, and maintainability. It&#x27;s a testament to what can be achieved with static site generation and modern CSS frameworks.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Technical Rating: ⭐⭐⭐⭐⭐&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Production Ready: ✅&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Recommended for: Bloggers, Developers, Technical Writers&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This theme successfully bridges the gap between developer needs and user experience, making it a standout choice in the static site generator ecosystem.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Rachel&#x27;s creative blog</title>
           <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/001-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/001-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/001-post/">&lt;h3 id=&quot;zola-devin-theme&quot;&gt;Zola Devin Theme&lt;&#x2F;h3&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/001-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/001-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/001-post/">&lt;h3 id=&quot;zola-devin-theme&quot;&gt;Zola Devin Theme&lt;&#x2F;h3&gt;
 &lt;p&gt;A modern, responsive theme for Zola static site generator featuring Tailwind CSS, dark mode support, and vanilla JavaScript.&lt;&#x2F;p&gt;
 &lt;p&gt;Perfect for blogs and personal websites.&lt;&#x2F;p&gt;
 &lt;p&gt;Demo Site: https:&#x2F;&#x2F;seankearney.github.io&#x2F;zola-devin&#x2F;&lt;&#x2F;p&gt;
@@ -35,9 +232,9 @@
           <title>ContentFlow AI: YouTube-to-Blog Automated Content Ecosystem Project Specification</title>
           <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec-en/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec-en/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec-en/">&lt;h1 id=&quot;contentflow-ai-youtube-to-blog-automated-content-ecosystem-project-specification&quot;&gt;ContentFlow AI: YouTube-to-Blog Automated Content Ecosystem Project Specification&lt;&#x2F;h1&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec-en/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec-en/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec-en/">&lt;h1 id=&quot;contentflow-ai-youtube-to-blog-automated-content-ecosystem-project-specification&quot;&gt;ContentFlow AI: YouTube-to-Blog Automated Content Ecosystem Project Specification&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;project-overview&quot;&gt;Project Overview&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;project-name&quot;&gt;Project Name&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;ContentFlow AI&lt;&#x2F;strong&gt; - Intelligent Content Automation and Multi-Platform Distribution Ecosystem&lt;&#x2F;p&gt;
@@ -420,9 +617,9 @@ A&#x2F;B testing framework&lt;&#x2F;li&gt;
           <title>ContentFlow AI: YouTube到博客自动化内容生态系统项目规范</title>
           <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/contentflow-ai-project-spec/">&lt;h1 id=&quot;contentflow-ai-youtubedao-bo-ke-zi-dong-hua-nei-rong-sheng-tai-xi-tong-xiang-mu-gui-fan&quot;&gt;ContentFlow AI: YouTube到博客自动化内容生态系统项目规范&lt;&#x2F;h1&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/contentflow-ai-project-spec/">&lt;h1 id=&quot;contentflow-ai-youtubedao-bo-ke-zi-dong-hua-nei-rong-sheng-tai-xi-tong-xiang-mu-gui-fan&quot;&gt;ContentFlow AI: YouTube到博客自动化内容生态系统项目规范&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;xiang-mu-gai-shu&quot;&gt;项目概述&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;xiang-mu-ming-cheng&quot;&gt;项目名称&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;ContentFlow AI&lt;&#x2F;strong&gt; - 智能内容自动化与多平台分发生态系统&lt;&#x2F;p&gt;
@@ -805,9 +1002,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Eleventh Test Post</title>
           <pubDate>Tue, 11 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/eleventh-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/eleventh-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/eleventh-post/">&lt;p&gt;Eleventh test post to verify pagination. This should appear on the second page.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/eleventh-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/eleventh-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/eleventh-post/">&lt;p&gt;Eleventh test post to verify pagination. This should appear on the second page.&lt;&#x2F;p&gt;
 &lt;p&gt;Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -815,9 +1012,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Tenth Test Post</title>
           <pubDate>Mon, 10 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/tenth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/tenth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/tenth-post/">&lt;p&gt;Tenth test post for pagination testing. Final post for first page.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/tenth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/tenth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/tenth-post/">&lt;p&gt;Tenth test post for pagination testing. Final post for first page.&lt;&#x2F;p&gt;
 &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -825,9 +1022,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Ninth Test Post</title>
           <pubDate>Sun, 09 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/ninth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/ninth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/ninth-post/">&lt;p&gt;Ninth test post for pagination verification. Adding more searchable content.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/ninth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/ninth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/ninth-post/">&lt;p&gt;Ninth test post for pagination verification. Adding more searchable content.&lt;&#x2F;p&gt;
 &lt;p&gt;Officia deserunt mollit anim id est laborum.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -835,9 +1032,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Eighth Test Post</title>
           <pubDate>Sat, 08 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/eighth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/eighth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/eighth-post/">&lt;p&gt;Eighth test post for pagination testing. More unique searchable content.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/eighth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/eighth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/eighth-post/">&lt;p&gt;Eighth test post for pagination testing. More unique searchable content.&lt;&#x2F;p&gt;
 &lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -845,9 +1042,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Seventh Test Post</title>
           <pubDate>Fri, 07 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/seventh-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/seventh-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/seventh-post/">&lt;p&gt;Seventh test post for pagination verification. Adding searchable content.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/seventh-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/seventh-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/seventh-post/">&lt;p&gt;Seventh test post for pagination verification. Adding searchable content.&lt;&#x2F;p&gt;
 &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -855,9 +1052,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Sixth Test Post</title>
           <pubDate>Thu, 06 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/sixth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/sixth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/sixth-post/">&lt;p&gt;Sixth test post for pagination. More unique content for search functionality testing.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/sixth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/sixth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/sixth-post/">&lt;p&gt;Sixth test post for pagination. More unique content for search functionality testing.&lt;&#x2F;p&gt;
 &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -865,9 +1062,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Fifth Test Post</title>
           <pubDate>Wed, 05 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/fifth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/fifth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/fifth-post/">&lt;p&gt;Fifth test post for pagination verification. Adding unique content for search testing.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/fifth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/fifth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/fifth-post/">&lt;p&gt;Fifth test post for pagination verification. Adding unique content for search testing.&lt;&#x2F;p&gt;
 &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -875,9 +1072,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Fourth Test Post</title>
           <pubDate>Tue, 04 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/fourth-post/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/fourth-post/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/fourth-post/">&lt;p&gt;This is a fourth test post to verify pagination. Testing content for search functionality as well.&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/fourth-post/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/fourth-post/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/fourth-post/">&lt;p&gt;This is a fourth test post to verify pagination. Testing content for search functionality as well.&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -885,9 +1082,9 @@ A&#x2F;B测试框架&lt;&#x2F;li&gt;
           <title>Markdown Sample</title>
           <pubDate>Mon, 03 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/markdown/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/markdown/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/markdown/">&lt;h1 id=&quot;markdown-syntax-test&quot;&gt;Markdown Syntax Test&lt;&#x2F;h1&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/markdown/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/markdown/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/markdown/">&lt;h1 id=&quot;markdown-syntax-test&quot;&gt;Markdown Syntax Test&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;headings&quot;&gt;Headings&lt;&#x2F;h2&gt;
 &lt;h1 id=&quot;heading-1&quot;&gt;Heading 1&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;&#x2F;h2&gt;
@@ -977,9 +1174,9 @@ Task 2&lt;&#x2F;li&gt;
           <title>Code Sample</title>
           <pubDate>Sun, 02 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/lots-of-code/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/lots-of-code/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/lots-of-code/">&lt;h1 id=&quot;welcome-to-code-sample&quot;&gt;Welcome to Code Sample!&lt;&#x2F;h1&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/lots-of-code/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/lots-of-code/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/lots-of-code/">&lt;h1 id=&quot;welcome-to-code-sample&quot;&gt;Welcome to Code Sample!&lt;&#x2F;h1&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; JavaScript example
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;greet&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;) {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Hello, ${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}!&lt;&#x2F;span&gt;&lt;span&gt;`;
@@ -1064,9 +1261,9 @@ Task 2&lt;&#x2F;li&gt;
           <title>About Me</title>
           <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/about/</link>
-          <guid>https://seankearney.github.io/zola-devin/about/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/about/">&lt;img src=&quot;..&#x2F;images&#x2F;devin-avatar.png&quot; alt=&quot;Devin&#x27;s Avatar&quot; class=&quot;mx-auto rounded-full w-48 h-48 mb-8 block&quot; &#x2F;&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/about/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/about/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/about/">&lt;img src=&quot;..&#x2F;images&#x2F;devin-avatar.png&quot; alt=&quot;Devin&#x27;s Avatar&quot; class=&quot;mx-auto rounded-full w-48 h-48 mb-8 block&quot; &#x2F;&gt;
 &lt;h1 id=&quot;hello-i-m-infinity-wave&quot;&gt;Hello, I&#x27;m Infinity! 👋&lt;&#x2F;h1&gt;
 &lt;p&gt;I&#x27;m an AI engineer with a passion for creating elegant, accessible web experiences. My journey in technology is driven by the belief that great software should be both powerful and delightful to use.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-i-love-to-build-tools&quot;&gt;What I Love to Build 🛠️&lt;&#x2F;h2&gt;
@@ -1112,10 +1309,10 @@ Task 2&lt;&#x2F;li&gt;
           <title>Hello World</title>
           <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://seankearney.github.io/zola-devin/post/hello-world/</link>
-          <guid>https://seankearney.github.io/zola-devin/post/hello-world/</guid>
-          <description xml:base="https://seankearney.github.io/zola-devin/post/hello-world/">&lt;h1 id=&quot;welcome-to-my-blog&quot;&gt;Welcome to My Blog!&lt;&#x2F;h1&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;seankearney.github.io&#x2F;zola-devin&#x2F;post&#x2F;hello-world&#x2F;hello-world.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <link>https://yoloinfinity55.github.io/flashzola/post/hello-world/</link>
+          <guid>https://yoloinfinity55.github.io/flashzola/post/hello-world/</guid>
+          <description xml:base="https://yoloinfinity55.github.io/flashzola/post/hello-world/">&lt;h1 id=&quot;welcome-to-my-blog&quot;&gt;Welcome to My Blog!&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;flashzola&#x2F;post&#x2F;hello-world&#x2F;hello-world.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;This is my first blog post where I&#x27;ll be sharing my thoughts, experiences, and knowledge about software development and technology.&lt;&#x2F;p&gt;</description>
       </item>
     </channel>

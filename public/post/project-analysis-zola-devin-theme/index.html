@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: Zola Devin Theme - A Modern Static Site Generator Theme | MiniJohn&#x27;s Tech Flow</title>
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('theme');
+            if (!savedTheme) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+            }
+        })();
+    </script>
+    <meta name="search-index" content="https://yoloinfinity55.github.io/flashzola/search_index.en.js">
+    <link rel="stylesheet" href="https://yoloinfinity55.github.io/flashzola/tailwind.css">
+    <script src="https://yoloinfinity55.github.io/flashzola/js/elasticlunr.min.js"></script>
+    <script src="https://yoloinfinity55.github.io/flashzola/search.js" defer></script>
+    <script src="https://yoloinfinity55.github.io/flashzola/theme.js" defer></script>
+    <script src="https://yoloinfinity55.github.io/flashzola/mobile-menu.js" defer></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://yoloinfinity55.github.io/flashzola/rss.xml">
+</head>
+<body>
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <a href="https://yoloinfinity55.github.io/flashzola" class="text-xl font-bold text-[var(--color-text-primary)]">MiniJohn&#x27;s Tech Flow</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="https://yoloinfinity55.github.io/flashzola/about" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]">About</a>
+                    <a href="https://yoloinfinity55.github.io/flashzola/post" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]">Blog</a>
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]">Categories</a>
+                    <a href="https://yoloinfinity55.github.io/flashzola/archive" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]">Archive</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input id="search-input" type="search" class="w-48 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" placeholder="Type to search..." aria-label="Search">
+                    <div id="search-preview" class="absolute right-0 mt-2 w-96 max-w-screen-sm bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden z-50 hidden">
+                    </div>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" class="text-[var(--color-text-primary)]" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-menu-button md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" class="text-[var(--color-text-primary)]" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 w-full border-t dark:border-gray-700">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="https://yoloinfinity55.github.io/flashzola/about" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] py-2">About</a>
+                <a href="https://yoloinfinity55.github.io/flashzola/post" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] py-2">Blog</a>
+                <a href="https://yoloinfinity55.github.io/flashzola/tags" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] py-2">Categories</a>
+                <a href="https://yoloinfinity55.github.io/flashzola/archive" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] py-2">Archive</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 transition-opacity duration-200 ease-in-out">
+        <div class="bg-white dark:bg-gray-800 w-full max-w-3xl mx-auto mt-16 sm:mt-20 rounded-lg shadow-xl overflow-hidden transform transition-transform duration-200">
+            <div class="flex justify-between items-center p-4 border-b dark:border-gray-700">
+                <h2 class="text-lg font-semibold text-[var(--color-text-primary)]">Search Results</h2>
+                <button id="close-search" class="text-2xl text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-150" aria-label="Close search">×</button>
+            </div>
+            <div id="search-results" class="max-h-[80vh] sm:max-h-[70vh] overflow-y-auto p-4 space-y-4">
+                <!-- Search results will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 pt-20 pb-16 min-h-screen">
+        
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <article class="mb-16">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-[var(--text-primary)] mb-4">Deep Dive: Zola Devin Theme - A Modern Static Site Generator Theme</h1>
+            <div class="text-gray-500 dark:text-gray-400">
+                <time datetime="2025-10-19">October 19, 2025</time>
+                
+                <span class="mx-2">•</span>
+                <span>
+                    
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags/zola/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline">zola</a>
+                    , 
+                    
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags/static-site-generator/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline">static-site-generator</a>
+                    , 
+                    
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags/tailwind-css/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline">tailwind-css</a>
+                    , 
+                    
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags/web-development/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline">web-development</a>
+                    , 
+                    
+                    <a href="https://yoloinfinity55.github.io/flashzola/tags/theme-analysis/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline">theme-analysis</a>
+                    
+                    
+                </span>
+                
+            </div>
+        </header>
+
+        <div class="prose dark:prose-invert max-w-none">
+            <h1 id="deep-dive-zola-devin-theme-a-modern-static-site-generator-theme">Deep Dive: Zola Devin Theme - A Modern Static Site Generator Theme</h1>
+<p>After conducting a comprehensive analysis of this project, I'm excited to share my findings about this impressive static site generator theme. This isn't just any theme - it's a production-ready, feature-complete blogging platform that demonstrates modern web development best practices.</p>
+<h2 id="project-overview">Project Overview</h2>
+<p>The <strong>Zola Devin Theme</strong> is a modern, responsive theme designed specifically for the <a href="https://www.getzola.org/">Zola static site generator</a>. Built with Tailwind CSS and vanilla JavaScript, it offers a comprehensive solution for bloggers and content creators who want a fast, secure, and beautiful website.</p>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="core-technologies">Core Technologies</h3>
+<ul>
+<li><strong>Static Site Generator</strong>: Zola (Rust-based) - Extremely fast and secure</li>
+<li><strong>CSS Framework</strong>: Tailwind CSS v3.4.17 - Utility-first approach for rapid development</li>
+<li><strong>JavaScript</strong>: Vanilla JavaScript - No framework dependencies, pure performance</li>
+<li><strong>Search Engine</strong>: Elasticlunr - Client-side search with intelligent highlighting</li>
+</ul>
+<h3 id="supporting-tools">Supporting Tools</h3>
+<ul>
+<li><strong>Typography Plugin</strong>: @tailwindcss/typography v0.5.8 - Beautiful text rendering</li>
+<li><strong>Build Process</strong>: NPM scripts for asset compilation</li>
+<li><strong>Content</strong>: Markdown with YAML front matter</li>
+</ul>
+<h2 id="key-features-breakdown">Key Features Breakdown</h2>
+<h3 id="art-modern-design-system">🎨 Modern Design System</h3>
+<p>The theme features a clean, professional design that adapts beautifully to different screen sizes. The color scheme uses a thoughtful palette that works well in both light and dark modes, with careful attention to contrast ratios for accessibility.</p>
+<h3 id="first-quarter-moon-dark-mode-support">🌓 Dark Mode Support</h3>
+<p>One of the standout features is the sophisticated dark mode implementation:</p>
+<ul>
+<li>Smooth transitions between themes</li>
+<li>Persistent user preference storage</li>
+<li>Proper color contrast in both modes</li>
+<li>Elegant toggle button with contextual icons</li>
+</ul>
+<h3 id="mag-intelligent-search">🔍 Intelligent Search</h3>
+<p>The search functionality is particularly impressive:</p>
+<ul>
+<li>Real-time search with debouncing</li>
+<li>Intelligent result highlighting</li>
+<li>Contextual snippets with search term emphasis</li>
+<li>Modal interface for focused searching</li>
+<li>Graceful error handling</li>
+</ul>
+<h3 id="iphone-mobile-first-responsive-design">📱 Mobile-First Responsive Design</h3>
+<p>Every aspect of the theme is optimized for mobile devices:</p>
+<ul>
+<li>Hamburger menu for small screens</li>
+<li>Touch-friendly interface elements</li>
+<li>Responsive typography that scales appropriately</li>
+<li>Optimized images and layouts</li>
+</ul>
+<h3 id="speech-balloon-comment-system">💬 Comment System</h3>
+<p>The comment system is elegantly implemented using YAML files:</p>
+<ul>
+<li>Co-located with blog posts for easy management</li>
+<li>Support for user avatars and formatted text</li>
+<li>Markdown rendering within comments</li>
+<li>Chronological organization</li>
+</ul>
+<h2 id="project-structure-analysis">Project Structure Analysis</h2>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>├── config.toml          # Bilingual site configuration
+</span><span>├── templates/           # Modular HTML templates
+</span><span>│   ├── base.html       # Main layout with header/footer
+</span><span>│   ├── index.html      # Homepage with hero section
+</span><span>│   ├── post.html       # Individual blog post layout
+</span><span>│   ├── post-list.html  # Paginated post listings
+</span><span>│   └── archive.html    # Yearly archive organization
+</span><span>├── content/            # Markdown content with front matter
+</span><span>├── static/             # Compiled assets and resources
+</span><span>└── public/             # Generated site output
+</span></code></pre>
+<h2 id="configuration-highlights">Configuration Highlights</h2>
+<p>The configuration file (<code>config.toml</code>) demonstrates thoughtful setup:</p>
+<h3 id="bilingual-support">Bilingual Support</h3>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[languages.zh]
+</span><span style="color:#bf616a;">title </span><span>= &quot;</span><span style="color:#a3be8c;">MiniJohn 的技术流</span><span>&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;</span><span style="color:#a3be8c;">AI 驱动的技术博客：探索 Rust、Go 和内容自动化</span><span>&quot;
+</span></code></pre>
+<h3 id="search-optimization">Search Optimization</h3>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[search]
+</span><span style="color:#bf616a;">search_index_format </span><span>= &quot;</span><span style="color:#a3be8c;">elasticlunr_javascript</span><span>&quot;
+</span><span>
+</span><span>[markdown]
+</span><span style="color:#bf616a;">highlight_code </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">highlight_theme </span><span>= &quot;</span><span style="color:#a3be8c;">base16-ocean-dark</span><span>&quot;
+</span></code></pre>
+<h3 id="content-organization">Content Organization</h3>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[taxonomies]
+</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">tags</span><span>&quot;
+</span><span>
+</span><span>[extra]
+</span><span style="color:#bf616a;">blog_owner_name </span><span>= &quot;</span><span style="color:#a3be8c;">MiniJohn</span><span>&quot;
+</span><span style="color:#bf616a;">social_links </span><span>= [
+</span><span>    { </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">GitHub</span><span>&quot;, </span><span style="color:#bf616a;">url </span><span>= &quot;</span><span style="color:#a3be8c;">https://github.com/minijohn</span><span>&quot; },
+</span><span>    { </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">X</span><span>&quot;, </span><span style="color:#bf616a;">url </span><span>= &quot;</span><span style="color:#a3be8c;">https://x.com/minijohn</span><span>&quot; }
+</span><span>]
+</span></code></pre>
+<h2 id="technical-strengths">Technical Strengths</h2>
+<h3 id="performance">Performance</h3>
+<ul>
+<li><strong>Static Generation</strong>: No server-side processing required</li>
+<li><strong>Optimized CSS</strong>: Tailwind's utility classes ensure minimal CSS</li>
+<li><strong>Client-Side Search</strong>: No external search service dependencies</li>
+<li><strong>Efficient Loading</strong>: Strategic asset loading and caching</li>
+</ul>
+<h3 id="accessibility">Accessibility</h3>
+<ul>
+<li><strong>ARIA Labels</strong>: Proper labeling for screen readers</li>
+<li><strong>Keyboard Navigation</strong>: Full keyboard accessibility</li>
+<li><strong>Color Contrast</strong>: WCAG-compliant color combinations</li>
+<li><strong>Semantic HTML</strong>: Proper heading hierarchy and structure</li>
+</ul>
+<h3 id="maintainability">Maintainability</h3>
+<ul>
+<li><strong>Modular Templates</strong>: Easy to customize individual page types</li>
+<li><strong>Clean Code Structure</strong>: Well-organized CSS and JavaScript</li>
+<li><strong>Documentation</strong>: Comprehensive README with examples</li>
+<li><strong>Version Control</strong>: Git-ready project structure</li>
+</ul>
+<h2 id="build-process">Build Process</h2>
+<p>The development workflow is streamlined and efficient:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Install dependencies
+</span><span style="color:#bf616a;">npm</span><span> install
+</span><span>
+</span><span style="color:#65737e;"># Build CSS (watch mode for development)
+</span><span style="color:#bf616a;">npx</span><span> tailwindcss</span><span style="color:#bf616a;"> -i</span><span> ./static/input.css</span><span style="color:#bf616a;"> -o</span><span> ./static/tailwind.css</span><span style="color:#bf616a;"> --watch
+</span><span>
+</span><span style="color:#65737e;"># Build site for production
+</span><span style="color:#bf616a;">zola</span><span> build
+</span><span>
+</span><span style="color:#65737e;"># Preview locally
+</span><span style="color:#bf616a;">zola</span><span> serve
+</span></code></pre>
+<h2 id="content-management">Content Management</h2>
+<h3 id="post-structure">Post Structure</h3>
+<p>Each blog post follows a clear, organized structure:</p>
+<ul>
+<li>Markdown content with YAML front matter</li>
+<li>Optional promotional images</li>
+<li>Tag-based categorization</li>
+<li>Comment support via YAML files</li>
+</ul>
+<h3 id="example-post-front-matter">Example Post Front Matter</h3>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">title = &quot;Blog Post Title&quot;
+</span><span style="color:#a3be8c;">date = 2025-10-19
+</span><span style="color:#a3be8c;">description = &quot;Brief description of the post&quot;
+</span><span>
+</span><span>[</span><span style="color:#a3be8c;">extra</span><span>]
+</span><span style="color:#a3be8c;">promo_image = &quot;promo-image.jpg&quot;
+</span><span>
+</span><span>[</span><span style="color:#a3be8c;">taxonomies</span><span>]
+</span><span style="color:#a3be8c;">tags = [&quot;tag1&quot;, &quot;tag2&quot;]
+</span><span style="color:#a3be8c;">+++
+</span></code></pre>
+<h2 id="current-implementation-status">Current Implementation Status</h2>
+<p>The theme is currently configured for <strong>MiniJohn's Tech Flow</strong>, an AI engineering blog focusing on:</p>
+<ul>
+<li>Rust and Go microservices</li>
+<li>Content automation tools</li>
+<li>AI-driven development workflows</li>
+</ul>
+<p>The site features:</p>
+<ul>
+<li>15+ published blog posts</li>
+<li>Bilingual content (English/Chinese)</li>
+<li>Social media integration</li>
+<li>RSS feed generation</li>
+<li>Search functionality</li>
+</ul>
+<h2 id="areas-for-potential-enhancement">Areas for Potential Enhancement</h2>
+<p>While the theme is remarkably complete, there are always opportunities for growth:</p>
+<h3 id="potential-additions">Potential Additions</h3>
+<ol>
+<li><strong>Syntax Highlighting</strong>: Enhanced code block rendering</li>
+<li><strong>Image Optimization</strong>: Automated WebP conversion and lazy loading</li>
+<li><strong>Analytics Integration</strong>: More detailed tracking capabilities</li>
+<li><strong>SEO Enhancements</strong>: Advanced meta tag management</li>
+<li><strong>Performance Monitoring</strong>: Core Web Vitals tracking</li>
+</ol>
+<h3 id="customization-opportunities">Customization Opportunities</h3>
+<ol>
+<li><strong>Color Schemes</strong>: Additional theme variants</li>
+<li><strong>Typography</strong>: Font family customization options</li>
+<li><strong>Layout Variations</strong>: Alternative homepage layouts</li>
+<li><strong>Plugin System</strong>: Extensibility for additional features</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Zola Devin Theme represents a high-quality, production-ready solution for modern blogging. Its combination of performance, accessibility, and feature completeness makes it an excellent choice for developers and content creators who value both technical excellence and user experience.</p>
+<p>The project's architecture demonstrates deep understanding of modern web development practices, with careful attention to performance, accessibility, and maintainability. It's a testament to what can be achieved with static site generation and modern CSS frameworks.</p>
+<p><strong>Technical Rating: ⭐⭐⭐⭐⭐</strong><br />
+<strong>Production Ready: ✅</strong><br />
+<strong>Recommended for: Bloggers, Developers, Technical Writers</strong></p>
+<p>This theme successfully bridges the gap between developer needs and user experience, making it a standout choice in the static site generator ecosystem.</p>
+
+        </div>
+    </article>
+
+    
+    <nav class="flex justify-between items-center py-8 border-t border-gray-200 dark:border-gray-700">
+        
+        <a href="https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;flashzola&#x2F;post&#x2F;001-post&#x2F;" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Rachel&#x27;s creative blog
+        </a>
+        
+
+        
+        <div></div>
+        
+    </nav>
+    
+
+    
+    
+        
+    
+    
+    
+</div>
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+        <div class="container mx-auto px-4 py-8">
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-6">
+                
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;minijohn" 
+                   class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="GitHub">
+                    
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    
+                </a>
+                
+                <a href="https:&#x2F;&#x2F;x.com&#x2F;minijohn" 
+                   class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="X">
+                    
+                </a>
+                
+                <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;minijohn" 
+                   class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="LinkedIn">
+                    
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    
+                </a>
+                
+                <a href="https:&#x2F;&#x2F;space.bilibili.com&#x2F;xxxxxx" 
+                   class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Bilibili">
+                    
+                </a>
+                
+            </div>
+
+            <!-- Footer Links -->
+            <div class="text-center space-y-4">
+                <p class="text-gray-600 dark:text-gray-400">
+                    © 2025 MiniJohn
+                </p>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Powered by <a href="https://www.getzola.org/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Zola</a>
+                    &amp;
+                    <span><a href="https://github.com/seankearney/zola-devin" class="hover:text-gray-900 dark:hover:text-white transition-colors">Devin</a></span>
+                </p>
+                <a href="https://yoloinfinity55.github.io/flashzola/rss.xml" 
+                   class="inline-block text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                   title="RSS Feed">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

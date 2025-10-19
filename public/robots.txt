@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://seankearney.github.io/zola-devin/sitemap.xml
+Sitemap: https://yoloinfinity55.github.io/flashzola/sitemap.xml
