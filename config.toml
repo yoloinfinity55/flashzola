@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://minijohn.github.io/flashzola"  # 替换为您的实际站点 URL (e.g., Netlify 域名)
+base_url = "https://yoloinfinity55.github.io/flashzola"  # 替换为您的实际站点 URL (e.g., Netlify 域名)
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
